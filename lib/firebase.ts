@@ -5,14 +5,14 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getDatabase } from "firebase/database";  // ← changed from firestore
 
 const firebaseConfig = {
-  apiKey: "AIzaSyASr27vooOKzWQQxklSpqaVZiJxLDiygE4",
-  authDomain: "note-making-bae90.firebaseapp.com",
-  databaseURL: "https://note-making-bae90-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "note-making-bae90",
-  storageBucket: "note-making-bae90.firebasestorage.app",
-  messagingSenderId: "1005860476351",
-  appId: "1:1005860476351:web:ce466317411b22b9097d0a",
-  measurementId: "G-Y9MR3NLK1Y"
+  apiKey:Process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain:Process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  databaseURL:Process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL
+  projectId:Process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
+  storageBucket:Process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+  messagingSenderId:Process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+  appId:Process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+  measurementId:Process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 const app = getApps().length === 0
